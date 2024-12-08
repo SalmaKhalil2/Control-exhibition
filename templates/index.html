@@ -14,14 +14,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
-   
+
 </head>
 
 <body>
   <!-- Start Header -->
   <div class="header">
     <div class="container">
-      <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Submit Icon" style="width: 56px; height: 70px;">
+      <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Submit Icon"
+        style="width: 56px; height: 70px;">
 
       <div class="links">
         <span class="icon">
@@ -48,7 +49,8 @@
     <div class="container">
       <div class="feat">
         <i class="fas fa-magic fa-3x"></i>
-        <img src="{{ url_for('static', filename='images/idea.png') }}" alt="Submit Icon" style="width: 50px; height: 50px;">
+        <img src="{{ url_for('static', filename='images/idea.png') }}" alt="Submit Icon"
+          style="width: 50px; height: 50px;">
 
 
         <h3>Submit Your Project
@@ -58,7 +60,8 @@
       </div>
       <div class="feat">
         <i class="far fa-gem fa-3x"></i>
-        <img src="{{ url_for('static', filename='images/vote.png') }}" alt="Submit Icon" style="width: 50px; height: 50px;">
+        <img src="{{ url_for('static', filename='images/vote.png') }}" alt="Submit Icon"
+          style="width: 50px; height: 50px;">
 
 
         <h3>Vote for the Best
@@ -69,7 +72,8 @@
       <div class="feat">
         <i class="fas fa-globe-asia fa-3x"></i>
 
-        <img src="{{ url_for('static', filename='images/talent.png') }}" alt="Submit Icon" style="width: 50px; height: 50px;">
+        <img src="{{ url_for('static', filename='images/talent.png') }}" alt="Submit Icon"
+          style="width: 50px; height: 50px;">
 
 
         <h3>Celebrate Innovation
@@ -81,116 +85,131 @@
 
   <!-- Start Portfolio -->
 
-<div class="portfolio" id="portfolio">
-  <div class="container">
-    <h2 class="special-heading">Portfolio</h2>
-    <p>If you do it right, it will last forever.</p>
-    <div class="portfolio-content">
-      <div class="card">
-        <img decoding="async" src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project Image">
+  <div class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="special-heading">Portfolio</h2>
+      <p>If you do it right, it will last forever.</p>
+      <div class="portfolio-content">
+        <div class="card">
+          <img decoding="async" src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project Image">
 
 
 
-        <div class="info">
-          <h3>Smart Board</h3>
-          <p>A cost-effective alternative to traditional smart boards, using tablets or laptops combined with AI tools like Pixtplus...</p>
-          <a href="https://youtu.be/fJrHuu7OY7A?si=YU0xxdqEwUbLTDT4" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="youtube-icon">
-            For more details.
-          </a>
-          <form action="/vote" method="POST" class="vote-form">
-            <h3>{{ projects[0][1] }}</h3>
-            <label for="vote-button">{{ projects[0][3] }} votes</label>
-            <input type="hidden" name="project_id" value="1">  <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
-            <button type="submit" id="vote-button" class="vote-button">Vote</button>
-          </form>
+          <div class="info">
+            <h3>Smart Board</h3>
+            <p>A cost-effective alternative to traditional smart boards, using tablets or laptops
+              combined with AI tools like Pixtplus. The system facilitates teacher-student interaction by creating a
+              responsive board environment. The setup is budget-friendly and adaptable.</p>
+            <a href="https://youtu.be/fJrHuu7OY7A?si=YU0xxdqEwUbLTDT4" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                alt="YouTube" class="youtube-icon">
+              For more details.
+            </a>
+            <form action="/vote" method="POST" class="vote-form">
+              <h3>{{ projects[0][1] }}</h3>
+              <label for="vote-button">{{ projects[0][3] }} votes</label>
+              <input type="hidden" name="project_id" value="1"> <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
+              <button type="submit" id="vote-button" class="vote-button">Vote</button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img decoding="async" src="{{ url_for('static', filename='images/project2.jpg') }}" alt="" />
+        <div class="card">
+          <img decoding="async" src="{{ url_for('static', filename='images/project2.jpg') }}" alt="" />
 
 
-        <div class="info">
-          <h3>Revolutionizing Mining</h3>
-          <p>Junior Innovators use advanced robotics to enhance mining safety and efficiency by reaching inaccessible or hazardous areas...</p>
-          <a href="https://youtu.be/yf_m48tIXD0?si=Ll1VBsKMBzM2Kg2t" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="youtube-icon">
-            For more details.
-          </a>
-          <form action="/vote" method="POST" class="vote-form">
-            <h3>{{ projects[1][1] }}</h3>
-            <label for="vote-button">{{ projects[1][3] }} votes</label>
-            <input type="hidden" name="project_id" value="2">  <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
-            <button type="submit" id="vote-button" class="vote-button">Vote</button>
-          </form>
+          <div class="info">
+            <h3>Revolutionizing Mining</h3>
+            <p>Junior Innovators use advanced robotics to enhance mining safety and efficiency by reaching inaccessible
+              or hazardous areas. Robots complement human workers, ensuring safer exploration, reducing costs, and
+              providing high-quality analysis while safeguarding lives.</p>
+            <a href="https://youtu.be/yf_m48tIXD0?si=Ll1VBsKMBzM2Kg2t" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                alt="YouTube" class="youtube-icon">
+              For more details.
+            </a>
+            <form action="/vote" method="POST" class="vote-form">
+              <h3>{{ projects[1][1] }}</h3>
+              <label for="vote-button">{{ projects[1][3] }} votes</label>
+              <input type="hidden" name="project_id" value="2"> <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
+              <button type="submit" id="vote-button" class="vote-button">Vote</button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img decoding="async" src="{{ url_for('static', filename='images/project3.jpg') }}" alt="" />
+        <div class="card">
+          <img decoding="async" src="{{ url_for('static', filename='images/project3.jpg') }}" alt="" />
 
 
-        <div class="info">
-          <h3>Smart Safety</h3>
-          <p>The project uses AI and sensors to enhance industrial safety by integrating motion detection...</p>
-          <a href="https://youtu.be/9heKa6B9PPw?si=0D6DzcpRfZYmyMpn" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="youtube-icon">
-            For more details.
-          </a>
-          <form action="/vote" method="POST" class="vote-form">
-            <h3>{{ projects[2][1] }}</h3>
-            <label for="vote-button">{{ projects[2][3] }} votes</label>
-            <input type="hidden" name="project_id" value="3">  <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
-            <button type="submit" id="vote-button" class="vote-button">Vote</button>
-          </form>
+          <div class="info">
+            <h3>Smart Safety</h3>
+            <p>The project uses AI and sensors to enhance industrial safety by integrating motion detection, ultrasonic
+              sensors, and face recognition for hazard detection and worker identification, ensuring seamless operations
+              and reducing risks in manufacturing environments.</p>
+            <a href="https://youtu.be/9heKa6B9PPw?si=0D6DzcpRfZYmyMpn" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                alt="YouTube" class="youtube-icon">
+              For more details.
+            </a>
+            <form action="/vote" method="POST" class="vote-form">
+              <h3>{{ projects[2][1] }}</h3>
+              <label for="vote-button">{{ projects[2][3] }} votes</label>
+              <input type="hidden" name="project_id" value="3"> <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
+              <button type="submit" id="vote-button" class="vote-button">Vote</button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img decoding="async" src="{{ url_for('static', filename='images/project4.jpg') }}" alt="" />
+        <div class="card">
+          <img decoding="async" src="{{ url_for('static', filename='images/project4.jpg') }}" alt="" />
 
 
-        <div class="info">
-          <h3>ExoTeam</h3>
-          <p>The project develops a rehabilitation hand device for stroke patients...</p>
-          <a href="https://youtu.be/t0iDpxJY3NU?si=FGywggZP5z_MqUz-" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="youtube-icon">
-            For more details.
-          </a>
-          <form action="/vote" method="POST" class="vote-form">
-            <h3>{{ projects[3][1] }}</h3>
-            <label for="vote-button">{{ projects[3][3] }} votes</label>
-            <input type="hidden" name="project_id" value="4">  <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
-            <button type="submit" id="vote-button" class="vote-button">Vote</button>
-          </form>
+          <div class="info">
+            <h3>ExoTeam</h3>
+            <p>The project develops a rehabilitation hand device for stroke patients, using servo motors and pneumatic
+              pumps for electrical and air-based movements. It integrates a mobile app for therapy and mirror therapy
+              using a camera.</p>
+            <a href="https://youtu.be/t0iDpxJY3NU?si=FGywggZP5z_MqUz-" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                alt="YouTube" class="youtube-icon">
+              For more details.
+            </a>
+            <form action="/vote" method="POST" class="vote-form">
+              <h3>{{ projects[3][1] }}</h3>
+              <label for="vote-button">{{ projects[3][3] }} votes</label>
+              <input type="hidden" name="project_id" value="4"> <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
+              <button type="submit" id="vote-button" class="vote-button">Vote</button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img decoding="async" src="{{ url_for('static', filename='images/project5.jpg') }}" alt="Project Image" />
+        <div class="card">
+          <img decoding="async" src="{{ url_for('static', filename='images/project5.jpg') }}" alt="Project Image" />
 
 
-        <div class="info">
-          <h3>Radiobot</h3>
-          <p>The project involves a mobile-controlled robot designed to transport radioactive materials safely...</p>
-          <a href="https://youtu.be/lC2W08Bo40I?si=c0UtFLy7qU64nMbG" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="youtube-icon">
-            For more details.
-          </a>
-          <form action="/vote" method="POST" class="vote-form">
-            <h3>{{ projects[4][1] }}</h3>
-            <label for="vote-button">{{ projects[4][3] }} votes</label> 
-            <input type="hidden" name="project_id" value="5">  <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
-            <button type="submit" id="vote-button" class="vote-button">Vote</button>
-          </form>
+          <div class="info">
+            <h3>Radiobot</h3>
+            <p>The project involves a mobile-controlled robot designed to transport radioactive materials safely. It
+              aims to prevent risks to workers by using advanced safety measures, remote control, and radiation
+              monitoring to ensure safety in hazardous environments.</p>
+            <a href="https://youtu.be/lC2W08Bo40I?si=c0UtFLy7qU64nMbG" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+                alt="YouTube" class="youtube-icon">
+              For more details.
+            </a>
+            <form action="/vote" method="POST" class="vote-form">
+              <h3>{{ projects[4][1] }}</h3>
+              <label for="vote-button">{{ projects[4][3] }} votes</label>
+              <input type="hidden" name="project_id" value="5"> <!-- تغيير قيمة project_id لتناسب هذا المشروع -->
+              <button type="submit" id="vote-button" class="vote-button">Vote</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- End Portfolio -->
+  <!-- End Portfolio -->
 
   <!-- Start About -->
   <div class="about">
